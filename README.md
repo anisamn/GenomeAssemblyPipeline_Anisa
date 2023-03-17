@@ -1,8 +1,8 @@
 # GenomeAssemblyPipeline_Anisa
 
-##Languages and Packages**
+## Languages and Packages**
 
-###Installation for Bash: 
+### Installation for Bash: 
 
 Entrez Direct: E-Utilities on the Unix Command Line for step 4 to bring in the records associated with Betaherpesvirinae from NCBI 
 
@@ -31,7 +31,7 @@ tar -xzf SPAdes-3.12.0-Linux.tar.gz
 cd SPAdes-3.12.0-Linux/bin/
 
 
-###Package Installation for Python: 
+### Package Installation for Python: 
 
 
 import os
@@ -43,9 +43,9 @@ from Bio import Entrez
 from Bio import SeqIO
 
 
-##Flags for input files: 
+## Flags for input files: 
 
-###For Bowtie2 mapping 
+### For Bowtie2 mapping 
 
 bowtie2: calls the program required 
 
@@ -58,12 +58,12 @@ bowtie2: calls the program required
 -S: names the output file 
 
 
-###For saving only the reads that map for use in SPAdes assembly: 
+### For saving only the reads that map for use in SPAdes assembly: 
 
 --al-conc-gz: writes paired-end reads that align in the file 
 
 
-###Running SPAdes assembly: 
+### Running SPAdes assembly: 
 
 spades: calls the program required 
 
@@ -78,7 +78,7 @@ spades: calls the program required
 -o: name of outfile
 
 
-###Using Esearch: 
+### Using Esearch: 
 
 esearch: calls the program required 
 
@@ -93,7 +93,7 @@ efetch: calls the program required, outputs esearch in a specified form
 >: output file name 
 
 
-###Making a local database using BLAST: 
+### Making a local database using BLAST: 
 
 makeblastdb: calls the program required 
 
@@ -106,7 +106,7 @@ makeblastdb: calls the program required
 -dbtype: name of the database used 
 
 
-##Example Code
+## Example Code
 To run on the sample code, please download the provided SampleData file onto your linux server, and comment out lines --- through --- in the PipelineProject_Anisa_Nasse.py file. 
 
 Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file here, comment lines --- through --- out and run.  
@@ -115,9 +115,9 @@ to run:
 
 nohup python pipelineproject.py
 
-##Workflow
+## Workflow
 
-###Step One: Download FASTQ files associated with the input transcriptomes 
+### Step One: Download FASTQ files associated with the input transcriptomes 
 
 Input Files: 
 
@@ -129,7 +129,7 @@ Out Files:
 
 - SRR_1 and SRR_2 fastq files 
 
-###Step Two: Finding strains most similar to the patient samples 
+### Step Two: Finding strains most similar to the patient samples 
 
 Input Files: 
 
@@ -141,7 +141,7 @@ Out Files:
 
 - Bowtie2 mapped reads  
 
-###Step Three: Using output reads from Step Two, assemble the transcriptomes together to produce one assembly 
+### Step Three: Using output reads from Step Two, assemble the transcriptomes together to produce one assembly 
 
 Input File: 
 
@@ -151,7 +151,7 @@ Out File:
 
 - A directory called 'HCMV2-SRR_assembly' 
 
-###Step Four: Does the assembly from Step Three align with other virus strains? 
+### Step Four: Does the assembly from Step Three align with other virus strains? 
 
 Input File: 
 
