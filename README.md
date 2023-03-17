@@ -16,6 +16,10 @@ OR
 sh -c "$(wget -q ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect/install-edirect.sh -O -)"
 ```
 
+SRA-Toolkit : https://hpc.nih.gov/apps/sratoolkit.html 
+SRA-Toolkit GitHub: https://github.com/ncbi/sra-tools <-- installation and use can be found here 
+
+
 Bowtie2: https://www.metagenomics.wiki/tools/bowtie2/install
 
 Bowtie2 GitHub: https://github.com/BenLangmead/bowtie2
@@ -36,6 +40,21 @@ wget http://cab.spbu.ru/files/release3.12.0/SPAdes-3.12.0-Linux.tar.gz
 tar -xzf SPAdes-3.12.0-Linux.tar.gz
 
 cd SPAdes-3.12.0-Linux/bin/
+```
+
+BLAST+: https://www.ncbi.nlm.nih.gov/books/NBK279690/
+
+BLAST+ GitHub: https://github.com/ncbi/blast_plus_docs
+
+```
+Install:
+
+rpm -ivh ncbi-blast-2.2.18-1.x86_64.rpm
+
+Upgrade:
+
+rpm -Uvh ncbi-blast-2.2.18-1.x86_64.rpm
+
 ```
 
 ### Package Installation for Python: 
