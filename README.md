@@ -97,7 +97,6 @@ efetch: calls the program required, outputs esearch in a specified form
 
 -format: tells the program the file format to output 
 
-> : output file name 
 
 
 ### Making a local database using BLAST: 
