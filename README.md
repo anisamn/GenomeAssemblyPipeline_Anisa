@@ -2,7 +2,7 @@
 
 ## Languages and Packages
 
-### Installation for Bash: 
+### Installation for Linux: 
 
 Entrez Direct: E-Utilities on the Unix Command Line for step 4 to bring in the records associated with Betaherpesvirinae from NCBI 
 
