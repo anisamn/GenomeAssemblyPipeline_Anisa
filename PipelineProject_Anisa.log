@@ -3,7 +3,7 @@ Setup:
 
 Download SRRs from NCBI using wget. 
 
-Run fastq-dum -I --split-files (SRR) 
+Run fastq-dump -I --split-files (SRR) 
 
 output names are _#.fastq 
 
