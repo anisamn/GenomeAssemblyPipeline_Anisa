@@ -1,4 +1,4 @@
-'''
+
 import os 
 
 #step one - download FASTQ files associated with the HCMV transcriptomes
@@ -25,9 +25,10 @@ os.system('fastq-dump -I --split-files SRR5660045')
 
 print('finished downloading HCMV transcriptomes... ') 
 
+'''
 os.mkdir('SampleData') 
-'''
-'''
+
+
 import os
 
 SRRfastqs = ['SRR5660030_1.fastq', 'SRR5660030_2.fastq', 'SRR5660033_1.fastq', 'SRR5660033_2.fastq', 'SRR5660044_1.fastq', 'SRR5660044_2.fastq', 'SRR5660045_1.fastq',  'SRR5660045_2.fastq']
@@ -40,14 +41,14 @@ print(samplesList[1])
 test = samplesList[1]
 
 os.system(test) 
-'''
+
 
 #Determine if the user wants to run on sample data or full data: 
 import os
 #if running on sample, please run: 
 os.chdir(~\PipelineProject_Anisa_Nasse\SampleData) 
 #and continue, otherwise, leave the line above commented out. 
-
+'''
 
 ###########################################################################
 
@@ -71,15 +72,6 @@ HCMVrecord.close()
 
 
 
-'''
-#os.system('echo " Donor 1 (HCMV30) had 2259287 read pairs before Bowtie2 filtering and 1480440 read pairs after" >> log ')
-#os.system('git status') 
-#os.system('git add log') 
-#os.system('git commit -m "donor commits"') 
-#os.system('git push') 
-'''
-
-'''
 #Use Bowtie2 to create an index for HCMV (NCBI accession NC_006273.2) 
 os.system('bowtie2-build HCMVrecord.txt HCMV')
 
@@ -198,6 +190,9 @@ os.system('esearch -db Nucleotide -query ""Betaherpesvirinae"[Organism] OR Betah
 # -dbtype: type of database used 
 os.system('makeblastdb -in BetaherpesvirinaeRecords.txt  -out Betaherpesvirinae -title Betaherpesvirinae -dbtype nucl')  
 
+
+
+'''
 import os 
 
 #step one - download FASTQ files associated with the HCMV transcriptomes
@@ -213,4 +208,3 @@ SRR5660045 = 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660045/SRR5660045
 #then using wget to download from the associated link 
 os.system('wget ' + SRR5660030)
 
-'''
