@@ -113,9 +113,9 @@ makeblastdb: calls the program required
 
 
 ## Example Code
-To run on the sample code, please download the provided SampleData file onto your linux server, and comment out lines 2 through 26 in the PipelineProject_Anisa_Nasse.py file. 
+To run on the sample code, please download the provided SampleData file onto your linux server, and comment out lines 3 through 26 in the PipelineProject_Anisa_Nasse.py file. 
 
-Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file here, comment lines 2 through 26 out and run.  
+Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file here, comment lines 3 through 26 out and run.  
 
 to run: 
 
@@ -123,7 +123,9 @@ nohup python pipelineproject.py
 
 ## Workflow
 
-### Step One: Download FASTQ files associated with the input transcriptomes 
+### Step One: Download FASTQ files associated with the input transcriptomes: 
+
+This step uses wget and NCBI to download required HCMV SRR files for further testing. 
 
 Input Files: 
 
@@ -135,7 +137,10 @@ Out Files:
 
 - SRR_1 and SRR_2 fastq files 
 
-### Step Two: Finding strains most similar to the patient samples 
+### Step Two: Finding strains most similar to the patient samples: 
+
+This step uses Entrez to download HCMV records from NCBI, then uses Bowtie2 to create an index for these records. 
+The reads that map to each transcriptome are saved for use in step three. 
 
 Input Files: 
 
@@ -147,7 +152,9 @@ Out Files:
 
 - Bowtie2 mapped reads  
 
-### Step Three: Using output reads from Step Two, assemble the transcriptomes together to produce one assembly 
+### Step Three: Using output reads from Step Two, assemble the transcriptomes together to produce one assembly: 
+
+SPAdes is used in this step. 
 
 Input File: 
 
@@ -158,6 +165,9 @@ Out File:
 - A directory called 'HCMV2-SRR_assembly' 
 
 ### Step Four: Does the assembly from Step Three align with other virus strains? 
+
+Python code is used to find the longest contig produced in Step Four. Blast+ is then used to make a local database for the 
+Betaherpesvirinae subfamily, and to use the longest contig to find the top 10 hits most similar to the local database. 
 
 Input File: 
 
