@@ -82,7 +82,7 @@ spades: calls the program required
 
 -pe-1 and pe-2: files containing left and right reads for the paired-end libraries 
 
- -o: name of outfile
+- o : name of outfile
 
 
 ### Using Esearch: 
