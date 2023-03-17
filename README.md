@@ -114,5 +114,53 @@ to run:
 
 nohup python pipelineproject.py
 
+**Workflow**
+
+Step One: Download FASTQ files associated with the input transcriptomes 
+
+Input Files: 
+
+- SRA downloads from NCBI 
+
+Out Files: 
+
+- SRR files 
+
+- SRR_1 and SRR_2 fastq files 
+
+Step Two: Finding strains most similar to the patient samples 
+
+Input Files: 
+
+- Nucleotide records from NCBI using Entrez
+
+Out Files: 
+
+- Bowtie2 .sam files 
+
+- Bowtie2 mapped reads  
+
+Step Three: Using output reads from Step Two, assemble the transcriptomes together to produce one assembly 
+
+Input File: 
+
+- Mapped reads from step two 
+
+Out File: 
+
+- A directory called 'HCMV2-SRR_assembly' 
+
+Step Four: Does the assembly from Step Three align with other virus strains? 
+
+Input File: 
+
+- Betaherpesvirinae records from NCBI
+
+Out Files: 
+
+- longestContig.txt containing the longest contig from the downloaded records file 
+
+- Table containing the top 10 blast command outputs 
+
 
 
