@@ -113,9 +113,9 @@ makeblastdb: calls the program required
 
 
 ## Example Code
-To run on the sample code, please download the provided SampleData file onto your linux server, and comment out lines --- through --- in the PipelineProject_Anisa_Nasse.py file. 
+To run on the sample code, please download the provided SampleData file onto your linux server, and comment out lines 2 through 26 in the PipelineProject_Anisa_Nasse.py file. 
 
-Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file here, comment lines --- through --- out and run.  
+Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file here, comment lines 2 through 26 out and run.  
 
 to run: 
 
