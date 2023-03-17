@@ -119,7 +119,7 @@ Or, cd home/anasse/PipelineProject_Anisa_Nasse/SampleData, copy the python file 
 
 to run: 
 
-nohup python pipelineproject.py
+nohup python PipelineProject_Anisa_Nasse.py
 
 ## Workflow
 
