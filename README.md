@@ -82,7 +82,7 @@ spades: calls the program required
 
 -pe-1 and pe-2: files containing left and right reads for the paired-end libraries 
 
-the flag -o : name of outfile
+-o : name of outfile
 
 
 ### Using Esearch: 
@@ -97,7 +97,7 @@ efetch: calls the program required, outputs esearch in a specified form
 
 -format: tells the program the file format to output 
 
->: output file name 
+> : output file name 
 
 
 ### Making a local database using BLAST: 
