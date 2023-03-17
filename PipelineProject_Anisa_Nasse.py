@@ -26,6 +26,9 @@ os.system('fastq-dump -I --split-files SRR5660045')
 print('finished downloading HCMV transcriptomes... ') 
 
 '''
+#This was one section I wanted to work on-- 
+#instead of having to download the sample data from GitHub, a directory will automatically be made here, then the user can choose to continue with 
+#the sample data or full data. 
 os.mkdir('SampleData') 
 
 
