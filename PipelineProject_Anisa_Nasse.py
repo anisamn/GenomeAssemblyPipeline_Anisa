@@ -193,21 +193,19 @@ os.system('esearch -db Nucleotide -query ""Betaherpesvirinae"[Organism] OR Betah
 # -dbtype: type of database used 
 os.system('makeblastdb -in BetaherpesvirinaeRecords.txt  -out Betaherpesvirinae -title Betaherpesvirinae -dbtype nucl')  
 
+#blasting from python using the longest contig as input
+inputFile = 'longestContig.txt'
+outputFile = 'BetaherpesvirinaeResults.csv'
+blastCommand = 'blastn -query ' + inputFile + ' -db Betaherpesvirinae -out ' + outputFile + ' -outfmt "6 sacc pident length qstart qend sstart send bitscore evalue stitles" > blastout.tsv '
+print(blastCommand)
+
+os.system(blastCommand)
+
+#making table of blast command outputs
+
+os.system('echo "sacc pident length qstart qend sstart send bitscore evalue stitle" | cat - BetaherpesvirinaeResults.csv > BetaherpesvirinaeResults.tsv')
+os.system('head -n 11 BetaherpesvirinaeResults.tsv  > BetaherpesvirinaeResults2.tsv')
 
 
-'''
-import os 
-
-#step one - download FASTQ files associated with the HCMV transcriptomes
-print('step one -- downloading transcriptomes') 
-
-
-#download HCMV transcriptomes from SRA by first assigning the site names to the associated SRR ID
-SRR5660030 = 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660030/SRR5660030' 
-SRR5660033 = 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660033/SRR5660033' 
-SRR5660044 = 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660044/SRR5660044'
-SRR5660045 = 'https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR5660045/SRR5660045'
- 
-#then using wget to download from the associated link 
-os.system('wget ' + SRR5660030)
+print('finished')
 
